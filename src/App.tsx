@@ -2,6 +2,9 @@ import fetch from 'cross-fetch'
 import { useQuery } from 'react-query'
 import type { Post } from './types'
 
+import QUERY from "./Query.gql"
+console.log(QUERY)
+
 export function App() {
   const { isLoading, isSuccess, isError, data } = useQuery<Post[]>(
     'posts',
